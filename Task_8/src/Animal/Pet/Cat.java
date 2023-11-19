@@ -10,7 +10,7 @@ public class Cat extends Animal implements Movable {
 
     @Override
     public void voice() {
-        System.out.println("Myau");
+        System.out.println("Myauu");
     }
 
     @Override
