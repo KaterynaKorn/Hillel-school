@@ -32,7 +32,7 @@ public class Main {
 
         WebElement couchList = browser.findElement(By.id("coachesSection"));
         List<WebElement> names = couchList.findElements(By.className("coach-card_name"));
-        System.out.println(names.toString());
+        System.out.println(names);
         browser.quit();
     }
 }
