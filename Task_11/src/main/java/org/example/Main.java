@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) throws InterruptedException{
         WebDriver browser = new ChromeDriver();
         browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         browser.get("https://ithillel.ua/");
 
         WebElement coursesButton = browser.findElement(By.cssSelector("#body > div.site-wrapper > div.site-header.-online > div.site-header_nav.site-nav > div > div > nav > ul > li:nth-child(2) > button"));
@@ -18,8 +17,6 @@ public class Main {
 
         WebElement programmingButton = browser.findElement(By.cssSelector("#coursesMenuControlPanel > ul > li:nth-child(2) > button"));
         programmingButton.click();
-
-
 
         WebElement frontButton = browser.findElement(By.cssSelector("#block-202987 > div > ul > li:nth-child(1)"));
         frontButton.click();
@@ -36,7 +33,6 @@ public class Main {
 
         }
 
-//        System.out.println(name);
-//        browser.quit();
+        browser.quit();
     }
 }
