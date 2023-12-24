@@ -44,11 +44,10 @@ public class Courses {
         System.out.println("All courses:" + coursesNamesList);
             return this;
         }
-    public Courses getAdditionalCourses(){
+    public List<String> getAdditionalCourses(){
        List <WebElement> coursesAddList = browser.findElements(By.xpath(COURSES_ADD_LIST));
         List<String> coursesAdditional = coursesAddList.stream().map(WebElement::getText).toList();
-        System.out.println("Additional courses:" + coursesAdditional);
-        return this;
+        return coursesAdditional;
     }
 
     public Courses getOpportunities(){
