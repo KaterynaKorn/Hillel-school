@@ -21,8 +21,8 @@ public class QuadraticEquationsTest
         expectedRoots.add(secondRoot);
         System.out.println(expectedRoots);
 
-        QuadraticEquations roots = new QuadraticEquations();
-        List<Double> actualResult = roots.quadraticEquations(1, 2, -3);
+        QuadraticEquations roots = new QuadraticEquations(1, 2, -3);
+        List<Double> actualResult = roots.quadraticEquations();
 
         Assert.assertEquals(expectedRoots, actualResult);
 
@@ -36,16 +36,16 @@ public class QuadraticEquationsTest
         expectedRoots.add(firstRoot);
         System.out.println(expectedRoots);
 
-        QuadraticEquations roots = new QuadraticEquations();
-        List<Double> actualResult = roots.quadraticEquations(1, 2, 1);
+        QuadraticEquations roots = new QuadraticEquations(1, 2, 1);
+        List<Double> actualResult = roots.quadraticEquations();
 
         Assert.assertEquals(expectedRoots, actualResult);
     }
 
     @Test
     public void noRootTest(){
-        QuadraticEquations roots = new QuadraticEquations();
-        List<Double> actualResult = roots.quadraticEquations(1, 2, 14);
+        QuadraticEquations roots = new QuadraticEquations(1, 2, 14);
+        List<Double> actualResult = roots.quadraticEquations();
         Assert.assertTrue(actualResult.isEmpty());
     }
 
